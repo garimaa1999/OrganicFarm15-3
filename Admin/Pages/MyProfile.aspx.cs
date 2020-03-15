@@ -16,32 +16,34 @@ public partial class Admin_Pages_Default2 : System.Web.UI.Page
     string str;
     protected void Page_Load(object sender, EventArgs e)
     {
-            ProfileImage.ImageUrl = "~/Admin/Pages/Images/" + Session["pic"].ToString();
-          Label1.Text = Session["Aname"].ToString();
-          cn.Open();
-          str = "select AdminName,AdminPassword,ContactNo,EmailId,ProfilePhoto from AdminMaster where AdminName= '" + Session["Aname"].ToString() + "' ";
-          cmd = new SqlCommand(str, cn);
-          dr = cmd.ExecuteReader();
-          if (dr.HasRows)
-          {
-              dr.Read();
-             txtAdminName.Text=dr["AdminName"].ToString();
-             txtAdminPassword.Text = dr["AdminPassword"].ToString();
-             txtAdminContactno.Text = dr["ContactNo"].ToString();
-             txtEmailID.Text = dr["EmailId"].ToString();
-             
-          }
-          cn.Close();
-      
+        if (!IsPostBack)
+        {
+            //ProfileImage.ImageUrl = "~/Admin/Pages/Images/" + Session["pic"].ToString();
+            //Label1.Text = Session["Aname"].ToString();
+            cn.Open();
+          //  str = "select AdminName,AdminPassword,ContactNo,EmailId,ProfilePhoto from AdminMaster where AdminName= '" + Session["Aname"].ToString() + "' ";
+            cmd = new SqlCommand(str, cn);
+            dr = cmd.ExecuteReader();
+            if (dr.HasRows)
+            {
+                dr.Read();
+                txtAdminName.Text = dr["AdminName"].ToString();
+                txtAdminPassword.Text = dr["AdminPassword"].ToString();
+                txtAdminContactno.Text = dr["ContactNo"].ToString();
+                txtEmailID.Text = dr["EmailId"].ToString();
+
+            }
+            cn.Close();
+        }
     }
     protected void btnInsert_Click(object sender, EventArgs e)
     {
         cn.Open();
-        str = "update AdminMaster set ProfilePhoto='" + ViewState["fname"] + "' where AdminName= '" + Session["Aname"].ToString() + "' ";
+       // str = "update AdminMaster set ProfilePhoto='" + ViewState["fname"] + "' where AdminName= '" + Session["Aname"].ToString() + "' ";
         cmd = new SqlCommand(str, cn);
         cmd.ExecuteNonQuery();
         cn.Close();
-        Session["pic"] = ViewState["fname"].ToString();
+       // Session["pic"] = ViewState["fname"].ToString();
         ProfileImage.ImageUrl = "Images/" + ViewState["fname"].ToString();
         changeProfilePic.Visible = false;
         Response.Redirect("MyProfile.aspx");
@@ -58,7 +60,7 @@ public partial class Admin_Pages_Default2 : System.Web.UI.Page
         {
             if (fuProfile.PostedFile.ContentType == "image/jpeg")
             {
-                if (fuProfile.PostedFile.ContentLength < 700000)
+                if (fuProfile.PostedFile.ContentLength < 900000)
                 {
                     fname = fuProfile.FileName;
                     fuProfile.SaveAs(Server.MapPath("Images/" + fname));
@@ -90,10 +92,11 @@ public partial class Admin_Pages_Default2 : System.Web.UI.Page
     protected void btnChangeDetails_Click(object sender, EventArgs e)
     {
         cn.Open();
-        str = "update AdminMaster set AdminName='" + txtAdminName.Text + "',AdminPassword='" + txtAdminPassword.Text + "',ContactNo='" + txtAdminContactno.Text + "',EmailId='" + txtEmailID.Text + "' where  AdminName= '" + Session["Aname"].ToString() + "'";
+        //str = "update AdminMaster set AdminName='" + txtAdminName.Text + "',AdminPassword='" + txtAdminPassword.Text + "',ContactNo='" + txtAdminContactno.Text + "',EmailId='" + txtEmailID.Text + "' where  AdminName= '" + Session["Aname"].ToString() + "'";
         cmd = new SqlCommand(str, cn);
         cmd.ExecuteNonQuery();
         cn.Close();
+       // Session["Aname"] = txtAdminName.Text;
         Response.Redirect("MyProfile.aspx");
     }
 }

@@ -24,6 +24,8 @@ public partial class Admin_Pages_Default : System.Web.UI.Page
         dcdc.SoilTypeDetails.InsertOnSubmit(std);
         dcdc.SubmitChanges();
         gvSoilType.DataBind();
+        txtsoiltypename.Text = "";
+        Image1.ImageUrl = "";
 
     }
     protected void Btnimageupload_Click(object sender, EventArgs e)

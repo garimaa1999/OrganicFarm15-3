@@ -14,6 +14,7 @@ public partial class Admin_Pages_Default : System.Web.UI.Page
     }
     protected void btnInsert_Click(object sender, EventArgs e)
     {
+        
         ProductDetail pd = new ProductDetail { 
         ProductName =txtProductName.Text,
         SubCategoryID=Convert.ToInt32(ddlSubCategory .SelectedItem .Value),
@@ -26,7 +27,10 @@ public partial class Admin_Pages_Default : System.Web.UI.Page
         dcdc.ProductDetails.InsertOnSubmit(pd);
         dcdc.SubmitChanges();
         gvProduct.DataBind();
-        
+        txtProductName.Text = "";
+        Txtprice.Text = "";
+        Txtdescription.Text = "";
+        Image1.ImageUrl = "";
     }
     protected void btnUpload_Click(object sender, EventArgs e)
     {

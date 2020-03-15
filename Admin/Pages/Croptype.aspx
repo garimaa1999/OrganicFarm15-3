@@ -25,14 +25,6 @@
             </div>
  <div class="card-body bg-light">
                                     
-                                    
-                                   <div class="form-group row p-b-15">
-                                        <label for="inputEmail3" class="col-sm-3 text-right control-label col-form-label">Crop Type Name: </label>
-                                        <div class="col-sm-9">                                           
-                                           <asp:TextBox class="form-control" id="txtCropTypeName" runat="server">
-                                            </asp:TextBox>
-                                        </div>
-                                    </div>
                                    <div class="form-group row p-b-15">
                                         <label for="inputEmail3" class="col-sm-3 text-right control-label col-form-label">Soil Type Name: </label>
                                         <div class="col-sm-9"> 
@@ -42,11 +34,16 @@
                                     <asp:SqlDataSource ID="SqlDataSource4" runat="server" ConnectionString="<%$ ConnectionStrings:OrganicFarmConnectionString %>" 
             SelectCommand="SELECT * FROM [SoilTypeDetail]"></asp:SqlDataSource>
 
-                                                                                 
-                                            <%--<asp:TextBox class="form-control" id="txtsoiltypename" runat="server">
-                                            </asp:TextBox>--%>
+                                        </div>
+                                    </div>  
+                                   <div class="form-group row p-b-15">
+                                        <label for="inputEmail3" class="col-sm-3 text-right control-label col-form-label">Crop Type Name: </label>
+                                        <div class="col-sm-9">                                           
+                                           <asp:TextBox class="form-control" id="txtCropTypeName" runat="server">
+                                            </asp:TextBox>
                                         </div>
                                     </div>
+                                  
                                     <div class="form-group row p-b-15">
                                         <label for="inputEmail3" class="col-sm-3 text-right control-label col-form-label">Is Active : </label>
                                         <div class="col-sm-9">      
@@ -80,7 +77,7 @@
                                      <div class="form-group row p-b-15">
                                         <label for="inputEmail3" class="col-sm-3 text-right control-label col-form-label">Image : </label>
                                         <div class="col-sm-9">       
-                                         <asp:Image ID="Image1" runat="server"/>
+                                         <asp:Image ID="Image1" runat="server" Width="100px" Height="100px" />
                  
                    </div>
                  </div>  

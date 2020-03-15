@@ -14,7 +14,8 @@
     <meta name="author" content="">
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/favicon.png">
-    <title>Nice admin Template - The Ultimate Multipurpose admin template</title>
+    <title>Online Eco Farm - The Online Organic Farm Store.  
+    </title>
 	<link rel="canonical" href="https://www.wrappixel.com/templates/niceadmin/" />
     <!-- Custom CSS -->
     <link href="../../dist/css/style.min.css" rel="stylesheet">
@@ -70,15 +71,7 @@
                                         TextMode="Password"></asp:TextBox>
                                     <%--<input type="text" class="form-control form-control-lg" placeholder="Password" aria-label="Password" aria-describedby="basic-addon1">--%>
                                 </div>
-                                <div class="form-group row">
-                                    <div class="col-md-12">
-                                        <div class="custom-control custom-checkbox">
-                                            <%--<input type="checkbox" class="custom-control-input" id="customCheck1">--%>
-                                            <%--<label class="custom-control-label" for="customCheck1">Remember me</label>--%>
-                                            <a href="javascript:void(0)" id="to-recover" class="text-dark float-right"><i class="fa fa-lock m-r-5"></i> Forgot pwd?</a>
-                                        </div>
-                                    </div>
-                                </div>
+                               
                                 <div class="form-group text-center">
                                     <div class="col-xs-12 p-b-20">
                                         <%--<button class="btn btn-block btn-lg btn-info" type="submit">Log In</button>--%>

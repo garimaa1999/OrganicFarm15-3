@@ -55,5 +55,8 @@ public partial class Admin_Pages_Default : System.Web.UI.Page
         dcdc.CropTypeDetails.InsertOnSubmit(ctd);
         dcdc.SubmitChanges();
         gvCropType.DataBind();
+        txtCropTypeName.Text = "";
+        Image1.ImageUrl = "";
+        lbl1.Text = "";
     }
 }

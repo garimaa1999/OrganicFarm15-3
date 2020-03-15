@@ -31,7 +31,8 @@ public partial class Admin_Pages_Alogin : System.Web.UI.Page
         }
         else
         {
-            Label1.Text = "Incorrect AdminName and Password";
+            Response.Write("<script language=javascript>alert('Incorrect UserName and Password')</script>");
+            //Label1.Text = "Incorrect AdminName and Password";
         }
     }
 }

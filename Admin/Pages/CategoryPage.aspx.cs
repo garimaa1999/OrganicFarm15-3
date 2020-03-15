@@ -21,5 +21,6 @@ public partial class Admin_Pages_Default : System.Web.UI.Page
         dcdc.CategoryDetails.InsertOnSubmit(cd);
         dcdc.SubmitChanges();
         gvCategory.DataBind();
+        txtCatName.Text = "";
     }
 }

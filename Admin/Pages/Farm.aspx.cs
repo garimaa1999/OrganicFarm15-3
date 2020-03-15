@@ -44,25 +44,31 @@ public partial class Admin_Pages_Default : System.Web.UI.Page
     }
     protected void btnInsert_Click(object sender, EventArgs e)
     {
-        FarmDetail fd=new FarmDetail 
+        FarmDetail fd = new FarmDetail
         {
-        FarmName=txtFarmName .Text,
-        SoilTypeID=Convert .ToInt32 (ddlSoilId .SelectedItem .Value),
-        CropTypeID=Convert.ToInt32(ddlCrop .SelectedItem .Value),
-        SizeOfFarm=txtsizeoffarm .Text,
-        TimeDuration=Txttimeduration .Text,
-        DateOfBooking=Convert.ToDateTime (txtdateofbooking .Text),
-        DateOfReturn=Convert.ToDateTime (Txtdateofreturn .Text),
-        Price=Convert.ToInt32(TxtPrice .Text),
-        AreaId=Convert.ToInt32(ddlArea .SelectedItem .Value),
-        Description=TxtDescription .Text,
-        AgeOfProperty=TxtAgeOfProperty .Text ,
-        IsActive=Convert.ToInt32(DDLIsActive .SelectedItem.Value),
-        Image = ViewState["fname"].ToString()
+            FarmName = txtFarmName.Text,
+            SoilTypeID = Convert.ToInt32(ddlSoilId.SelectedItem.Value),
+            //CropTypeID=Convert.ToInt32(ddlCrop .SelectedItem .Value),
+            SizeOfFarm = txtsizeoffarm.Text,
+            //TimeDuration=Txttimeduration .Text,
+            //DateOfBooking=Convert.ToDateTime (txtdateofbooking .Text),
+            //DateOfReturn=Convert.ToDateTime (Txtdateofreturn .Text),
+            Price = Convert.ToInt32(TxtPrice.Text),
+            AreaId = Convert.ToInt32(ddlArea.SelectedItem.Value),
+            Description = TxtDescription.Text,
+            AgeOfProperty = TxtAgeOfProperty.Text,
+            IsActive = Convert.ToInt32(DDLIsActive.SelectedItem.Value),
+            Image = ViewState["fname"].ToString()
         };
         DataClassesDataContext dcdc = new DataClassesDataContext();
         dcdc.FarmDetails.InsertOnSubmit(fd);
         dcdc.SubmitChanges();
         gvFarm.DataBind();
+        txtFarmName.Text = "";
+        TxtAgeOfProperty.Text = "";
+        TxtDescription.Text = "";
+        TxtPrice.Text = "";
+        txtsizeoffarm.Text = "";
+        Image1.ImageUrl = "";
     }
 }

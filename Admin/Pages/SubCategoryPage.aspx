@@ -24,6 +24,19 @@
 
             </div>
  <div class="card-body bg-light">
+  <div class="form-group row p-b-15">
+                                        <label for="inputEmail3" class="col-sm-3 text-right control-label col-form-label">Category Name: </label>
+                                        <div class="col-sm-9">
+                                            <%--<input type="text" class="form-control" id="Text1" placeholder="First Name Here">--%>
+                                             <asp:DropDownList ID="ddlCatName" class="form-control" runat="server" 
+                                                         DataSourceID="SqlDataSource1" DataTextField="CategoryName" 
+                                                         DataValueField="CategoryID">
+                                                     </asp:DropDownList>
+                                                     <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
+                                                         ConnectionString="<%$ ConnectionStrings:OrganicFarmConnectionString %>" 
+                                                         SelectCommand="SELECT * FROM [CategoryDetail]"></asp:SqlDataSource>
+                                        </div>
+                                    </div>   
     <div class="form-group row p-b-15">
                                         <label for="inputEmail3" class="col-sm-3 text-right control-label col-form-label">Sub Category Name: </label>
                                         <div class="col-sm-9">
@@ -35,14 +48,7 @@
                                                 ForeColor="Red"></asp:RequiredFieldValidator>--%>
                                         </div>
                                     </div>   
-                                     <div class="form-group row p-b-15">
-                                        <label for="inputEmail3" class="col-sm-3 text-right control-label col-form-label">Category ID: </label>
-                                        <div class="col-sm-9">
-                                            <%--<input type="text" class="form-control" id="Text1" placeholder="First Name Here">--%>
-                                            <asp:TextBox class="form-control" id="txtCatID" runat="server">
-                                            </asp:TextBox>
-                                        </div>
-                                    </div>   
+                                    
                                      <div class="form-group row p-b-15">
                                         <label for="inputEmail3" class="col-sm-3 text-right control-label col-form-label">Is Active : </label>
                                         <div class="col-sm-9">      

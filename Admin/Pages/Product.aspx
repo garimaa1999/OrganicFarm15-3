@@ -31,12 +31,13 @@
                                             </asp:TextBox>
                                         </div>
                                     </div>
-                                   
+    <asp:UpdatePanel id="up1" runat="server">
+                                              <ContentTemplate>
                                             <div class="form-group row p-b-15">
                                         <label for="inputEmail3" class="col-sm-3 text-right control-label col-form-label">Category Name: </label>
-                                        <div class="col-sm-9">     
+                                          <div class="col-sm-9">     
                                                     <asp:DropDownList ID="ddlCategory" class="form-control" runat="server" DataSourceID="CategoryName" 
-            DataTextField="CategoryName" DataValueField="CategoryID">
+            DataTextField="CategoryName" DataValueField="CategoryID" AutoPostBack="True">
         </asp:DropDownList>
         <asp:SqlDataSource ID="CategoryName" runat="server" 
             ConnectionString="<%$ ConnectionStrings:OrganicFarmConnectionString %>" 
@@ -53,16 +54,18 @@
         </asp:DropDownList>
         <asp:SqlDataSource ID="SubCategory" runat="server" 
             ConnectionString="<%$ ConnectionStrings:OrganicFarmConnectionString %>" 
-            SelectCommand="SELECT * FROM [SubCategoryDetail] WHERE ([SubCategoryID] = @SubCategoryID)">
+            SelectCommand="SELECT * FROM [SubCategoryDetail] WHERE ([CategoryID] = @CategoryID)">
             <SelectParameters>
-                <asp:ControlParameter ControlID="ddlCategory" Name="SubCategoryID" 
+                <asp:ControlParameter ControlID="ddlCategory" Name="CategoryID" 
                     PropertyName="SelectedValue" Type="Int32" />
             </SelectParameters>
         </asp:SqlDataSource>
 
                                         </div>
                                     </div>
-
+                                    </ContentTemplate>
+                                            </asp:UpdatePanel>
+                                            
 
                                     <div class="form-group row p-b-15">
                                         <label for="inputEmail3" class="col-sm-3 text-right control-label col-form-label">Price: </label>

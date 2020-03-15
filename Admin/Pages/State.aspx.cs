@@ -20,6 +20,8 @@ public partial class Admin_Pages_Default : System.Web.UI.Page
         dcdc.StateMasters.InsertOnSubmit(sm);
         dcdc.SubmitChanges();
         gvState.DataBind();
+        txtStateName.Text = "";
+
         
     }
 }

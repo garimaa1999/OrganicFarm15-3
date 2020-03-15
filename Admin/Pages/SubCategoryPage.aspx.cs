@@ -15,13 +15,14 @@ public partial class Admin_Pages_Default : System.Web.UI.Page
     {
         SubCategoryDetail scd = new SubCategoryDetail { 
         SubCategoryName =txtSubCatName .Text ,
-        CategoryID =Convert.ToInt32 (txtCatID .Text) ,
+        CategoryID =Convert.ToInt32 (ddlCatName .SelectedItem .Value) ,
         IsActive =Convert.ToInt32 (DDLIsActive.SelectedItem.Value)
      };
         DataClassesDataContext dcdc = new DataClassesDataContext();
         dcdc.SubCategoryDetails.InsertOnSubmit(scd);
         dcdc.SubmitChanges();
         gvSubCategory.DataBind();
+        txtSubCatName.Text = "";
 
     }
 }

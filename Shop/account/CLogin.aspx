@@ -1,17 +1,17 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Registration.aspx.cs" Inherits="Client_Shop_Registration" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="CLogin.aspx.cs" Inherits="Client_Shop_account_Login" %>
 
 
 <!DOCTYPE html>
 <!--[if IE 9]> <html class="ie9 no-js" lang="en"> <![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 
-<!-- Mirrored from organic-shopy.myshopify.com/account/register by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 07 Mar 2020 04:02:44 GMT -->
+<!-- Mirrored from organic-shopy.myshopify.com/account/login by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 07 Mar 2020 04:02:39 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="canonical" href="register.html">
+    <link rel="canonical" href="login.html">
     
         <link rel="shortcut icon" href="../../cdn.shopify.com/s/files/1/2720/5854/files/George-Bokhua-An-Apple_32x32d344.png?v=1515643746" type="image/png">
     
@@ -50,7 +50,7 @@
         var shop_currency = 'USD';
         var money_format = '$';
         var wishlists = '';
-        var template = 'customers/register';
+        var template = 'customers/login';
     </script>
     <script>        window.performance && window.performance.mark && window.performance.mark('shopify.content_for_header.start');</script><meta id="shopify-digital-wallet" name="shopify-digital-wallet" content="/27205854/digital_wallets/dialog">
 <meta name="shopify-checkout-api-token" content="276b40500c0f6791c3ee5144c0988b31">
@@ -84,7 +84,7 @@
             window.addEventListener('load', asyncLoad, false);
         }
     })();</script>
-<script id="__st">    var __st = { "a": 27205854, "offset": -18000, "reqid": "21113c38-f3f1-4609-ab5c-4c5c8d19373b", "pageurl": "organic-shopy.myshopify.com\/account\/register", "u": "0f84ad1a24c0" };</script>
+<script id="__st">    var __st = { "a": 27205854, "offset": -18000, "reqid": "c0f57054-5431-4cbc-ad9b-3c37fa614dd4", "pageurl": "organic-shopy.myshopify.com\/account\/login", "u": "f41ef1b2815b" };</script>
 <script>    window.ShopifyPaypalV4VisibilityTracking = true;</script>
 <script>    window.ShopifyAnalytics = window.ShopifyAnalytics || {};
     window.ShopifyAnalytics.meta = window.ShopifyAnalytics.meta || {};
@@ -348,7 +348,7 @@
 }
 </style><script>            window.performance && window.performance.mark && window.performance.mark('shopify.content_for_header.end');</script>
 </head>
-<body class="template-customers/register">
+<body class="template-customers/login">
 <div class="prev-load">
     <a href="#"></a>
 </div>
@@ -370,32 +370,297 @@
             <div class="container">
                 <ul class="top-content clear-all">
                     
-                    <li>
-                    <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Client/Shop/account/CLogin.aspx" Font-Size="Medium" ForeColor="White" Font-Underline="False">LogIn &nbsp;&nbsp;&nbsp;</asp:HyperLink>
-                    <%--<a href="login.html" class="login-link">Sign In</a>--%></li>
-
-                    <li>
-                    <asp:HyperLink ID="hlRegistration" runat="server" NavigateUrl="~/Client/Shop/account/Registration.aspx" Font-Underline="False" ForeColor="White" Font-Size="Medium">&nbsp;&nbsp;&nbsp;&nbsp;Registration</asp:HyperLink>
-                    <%--<a href="register.html" class="register-link">Sign Up</a>--%></li>
+                    <li><a href="login.html" class="login-link">Sign In</a></li>
+                    <li><a href="register.html" class="register-link">Sign Up</a></li>
                     
-                  
+                    <li style="position: relative" class="has-mini-cart">
+                        <a href="../cart.html" class="cart-link"><i class="material-icons">shopping_cart</i> <span class="cart-item" style="margin-right: 2px">0</span> item(s) - <span class="cart-total">$0.00</span></a>
+                        
+                    </li>
                 </ul>
             </div>
         </div>
         <div class="main-menu">
             <div class="container">
                 <div class="left logo">
-                    <%--<a href="Home.aspx"></a>--%>
-                    <asp:Image ID="Logo" runat="server" ImageUrl="~/Client/logoclient.png"></asp:Image>
-                    <%--<img src="../../cdn.shopify.com/s/files/1/2720/5854/t/3/assets/logoe3f7.png?v=18163089491722597953" alt="">--%>
+                    <a href="../index.html"><img src="../../cdn.shopify.com/s/files/1/2720/5854/t/3/assets/logoe3f7.png?v=18163089491722597953" alt=""></a>
                 </div>
-                
+                <div class="right menu">
+                    <ul class="content-menu clear-all">
+                        
+                            <li class="level-0 ">
+                                <a href="../index.html">Home</a>
+                                
+                                    <ul class="home">
+                                        
+                                            <li class="level-1 ">
+                                                <a href="../index.html">Home 1</a>
+                                                
+                                            </li>
+                                        
+                                            <li class="level-1 ">
+                                                <a href="../index9575.html?preview_theme_id=31940476970">Home 2</a>
+                                                
+                                            </li>
+                                        
+                                            <li class="level-1 ">
+                                                <a href="../index0f5a.html?preview_theme_id=31940509738">Home 3</a>
+                                                
+                                            </li>
+                                        
+                                            <li class="level-1 ">
+                                                <a href="../index28bf.html?preview_theme_id=31940575274">Home 4</a>
+                                                
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                        
+                            <li class="level-0 ">
+                                <a href="#">Pages</a>
+                                
+                                    <ul class="pages">
+                                        
+                                            <li class="level-1 ">
+                                                <a href="../pages/4.html">404</a>
+                                                
+                                            </li>
+                                        
+                                            <li class="level-1 ">
+                                                <a href="../pages/about-us.html">About Us</a>
+                                                
+                                            </li>
+                                        
+                                            <li class="level-1 ">
+                                                <a href="../pages/faqs.html">FAQ</a>
+                                                
+                                            </li>
+                                        
+                                            <li class="level-1 ">
+                                                <a href="../pages/history.html">Our History</a>
+                                                
+                                            </li>
+                                        
+                                            <li class="level-1 ">
+                                                <a href="../pages/wishlist.html">Wishlist</a>
+                                                
+                                            </li>
+                                        
+                                            <li class="level-1 ">
+                                                <a href="../pages/our-team.html">Our team</a>
+                                                
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                        
+                            <li class="level-0 ">
+                                <a href="../collections/frontpage.html">Shop</a>
+                                
+                            </li>
+                        
+                            <li class="level-0 ">
+                                <a href="../blogs/news.html">Blog</a>
+                                
+                                    <ul class="blog">
+                                        
+                                            <li class="level-1 ">
+                                                <a href="../blogs/news.html">Blog 3 Columns</a>
+                                                
+                                            </li>
+                                        
+                                            <li class="level-1 ">
+                                                <a href="../blogs/news.html?preview_theme_id=31940476970">Blog Listing</a>
+                                                
+                                            </li>
+                                        
+                                            <li class="level-1 ">
+                                                <a href="../blogs/news.html?preview_theme_id=31940509738">Blog Left Sidebar</a>
+                                                
+                                            </li>
+                                        
+                                            <li class="level-1 ">
+                                                <a href="../blogs/news.html?preview_theme_id=31940575274">Blog Masonry</a>
+                                                
+                                            </li>
+                                        
+                                            <li class="level-1 ">
+                                                <a href="../blogs/news.html?preview_theme_id=31940640810">Blog Block</a>
+                                                
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                        
+                            <li class="level-0 ">
+                                <a href="#">Contact</a>
+                                
+                                    <ul class="contact">
+                                        
+                                            <li class="level-1 ">
+                                                <a href="../pages/contact-us.html">Contact 1</a>
+                                                
+                                            </li>
+                                        
+                                            <li class="level-1 ">
+                                                <a href="../pages/contact-2.html">Contact 2</a>
+                                                
+                                            </li>
+                                        
+                                            <li class="level-1 ">
+                                                <a href="../pages/contact-3.html">Contact 3</a>
+                                                
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                        
+                    </ul>
+                    <a href="#" class="toggle-menu"><i class="fa fa-bars"></i></a>
+                </div>
             </div>
         </div>
     </div>
     <div class="menu-responsive">
         <nav class="top-menu-responsive">
-            
+            <ul class="menu-item">
+                
+                    <li class="ui-menu-item level0   parent ">
+                        <a href="../index.html" class="level-top">Home</a>
+                        
+                            <ul class="subchildmenu">
+                                
+                                    <li class="ui-menu-item  level1 ">
+                                        <a class="widgettitle" href="../index.html">Home 1</a>
+                                        
+                                    </li>
+                                
+                                    <li class="ui-menu-item  level1 ">
+                                        <a class="widgettitle" href="../index9575.html?preview_theme_id=31940476970">Home 2</a>
+                                        
+                                    </li>
+                                
+                                    <li class="ui-menu-item  level1 ">
+                                        <a class="widgettitle" href="../index0f5a.html?preview_theme_id=31940509738">Home 3</a>
+                                        
+                                    </li>
+                                
+                                    <li class="ui-menu-item  level1 ">
+                                        <a class="widgettitle" href="../index28bf.html?preview_theme_id=31940575274">Home 4</a>
+                                        
+                                    </li>
+                                
+                            </ul>
+                        
+                    </li>
+                
+                    <li class="ui-menu-item level0   parent ">
+                        <a href="#" class="level-top">Pages</a>
+                        
+                            <ul class="subchildmenu">
+                                
+                                    <li class="ui-menu-item  level1 ">
+                                        <a class="widgettitle" href="../pages/4.html">404</a>
+                                        
+                                    </li>
+                                
+                                    <li class="ui-menu-item  level1 ">
+                                        <a class="widgettitle" href="../pages/about-us.html">About us</a>
+                                        
+                                    </li>
+                                
+                                    <li class="ui-menu-item  level1 ">
+                                        <a class="widgettitle" href="../pages/faqs.html">Faq</a>
+                                        
+                                    </li>
+                                
+                                    <li class="ui-menu-item  level1 ">
+                                        <a class="widgettitle" href="../pages/history.html">Our history</a>
+                                        
+                                    </li>
+                                
+                                    <li class="ui-menu-item  level1 ">
+                                        <a class="widgettitle" href="../pages/wishlist.html">Wishlist</a>
+                                        
+                                    </li>
+                                
+                                    <li class="ui-menu-item  level1 ">
+                                        <a class="widgettitle" href="../pages/our-team.html">Our team</a>
+                                        
+                                    </li>
+                                
+                            </ul>
+                        
+                    </li>
+                
+                    <li class="ui-menu-item level0  ">
+                        <a href="../collections/frontpage.html" class="level-top">Shop</a>
+                        
+                    </li>
+                
+                    <li class="ui-menu-item level0   parent ">
+                        <a href="../blogs/news.html" class="level-top">Blog</a>
+                        
+                            <ul class="subchildmenu">
+                                
+                                    <li class="ui-menu-item  level1 ">
+                                        <a class="widgettitle" href="../blogs/news.html">Blog 3 columns</a>
+                                        
+                                    </li>
+                                
+                                    <li class="ui-menu-item  level1 ">
+                                        <a class="widgettitle" href="../blogs/news.html?preview_theme_id=31940476970">Blog listing</a>
+                                        
+                                    </li>
+                                
+                                    <li class="ui-menu-item  level1 ">
+                                        <a class="widgettitle" href="../blogs/news.html?preview_theme_id=31940509738">Blog left sidebar</a>
+                                        
+                                    </li>
+                                
+                                    <li class="ui-menu-item  level1 ">
+                                        <a class="widgettitle" href="../blogs/news.html?preview_theme_id=31940575274">Blog masonry</a>
+                                        
+                                    </li>
+                                
+                                    <li class="ui-menu-item  level1 ">
+                                        <a class="widgettitle" href="../blogs/news.html?preview_theme_id=31940640810">Blog block</a>
+                                        
+                                    </li>
+                                
+                            </ul>
+                        
+                    </li>
+                
+                    <li class="ui-menu-item level0   parent ">
+                        <a href="#" class="level-top">Contact</a>
+                        
+                            <ul class="subchildmenu">
+                                
+                                    <li class="ui-menu-item  level1 ">
+                                        <a class="widgettitle" href="../pages/contact-us.html">Contact 1</a>
+                                        
+                                    </li>
+                                
+                                    <li class="ui-menu-item  level1 ">
+                                        <a class="widgettitle" href="../pages/contact-2.html">Contact 2</a>
+                                        
+                                    </li>
+                                
+                                    <li class="ui-menu-item  level1 ">
+                                        <a class="widgettitle" href="../pages/contact-3.html">Contact 3</a>
+                                        
+                                    </li>
+                                
+                            </ul>
+                        
+                    </li>
+                
+            </ul>
         </nav>
         <script>
             $(document).ready(function () {
@@ -434,105 +699,97 @@
 </header>
 <script>
     var theme_name = 'Organic';
-    var template = 'customers/register';
+    var template = 'customers/login';
 </script>
 </div>
     <div class="wrapper">
         
-<div class="register-form" style="display: block">
-<div class="custom-form-container" style="position: relative;padding: 50px 0px;z-index: 0">
-	<div class="container">
-		<div class="col-xs-12 col-md-6 no-pd">
-			<div class="background left" style="background-image: url('../../cdn.shopify.com/s/files/1/2720/5854/t/3/assets/bg-left-signup4e69.jpg?v=16795147648041369811')">
-				<div class="overlay-content"></div>
-				<div class="text">
-					<h4>Sign Up</h4>
-					<p>Sign up for all the latest news, offers and to check-out even faster.</p>
-					<img src="../../cdn.shopify.com/s/files/1/2720/5854/files/logo-footer4-18b39.png?v=1516156030" alt="">
-				</div>
-			</div>
-		</div>
-		<div class="col-xs-12 col-md-6 no-pd">
-			<div class="content-form">
-                
-				<div class="background right clear-all" style="background-image: url('../../cdn.shopify.com/s/files/1/2720/5854/t/3/assets/bg-signin96ab.jpg?v=8627352851137486050')">
-					<div class="overlay-content"></div>
-					<div class="content-form">
-						<h3><span>Sign Up</span> <span>Have an account?<asp:HyperLink ID="hlLog" runat="server" NavigateUrl="~/Client/Shop/account/CLogin.aspx">Sign In</asp:HyperLink>
-                        <%--<a href="login.html">Sign In</a>--%></span></h3>
-						<p>Sign up using your email address</p>
-                        <form id="create_customer" runat="server">
-                        <input type="hidden" name="form_type" value="create_customer" /><input type="hidden" name="utf8" value="✓" />
-                        
-
-						<div class="clearfix large_form">
-							<label for="User_name">User Name:</label>
-							<%--<input type="text"  name="customer[first_name]" id="first_name" placeholder="First Name" class="input-field" />--%>
-                            <asp:TextBox ID="Txtusername" runat="server" placeholder="User Name" class="input-field" ></asp:TextBox>
-						</div>
-
-						<div class="clearfix large_form">
-							<label for="UserPassword">User Password:</label>
-							<%--<input type="text"  name="customer[last_name]" placeholder="Last Name" id="last_name" class="input-field" />--%>
-                              <asp:TextBox ID="Txtupass" runat="server" placeholder="User Password" 
-                                class="input-field" TextMode="Password" ></asp:TextBox>
-						</div>
-
-                        <div class="clearfix large_form">
-							<label for="Confirmpassword">Confirm Password:</label>
-							<%--<input type="text"  name="customer[last_name]" placeholder="Last Name" id="last_name" class="input-field" />--%>
-                              <asp:TextBox ID="Txtcpass" runat="server" placeholder="Confirm Password" 
-                                class="input-field" TextMode="Password" ></asp:TextBox>
-						</div>
-
-						<div class="clearfix large_form">
-							<label for="email">Email Address:</label>
-							<%--<input type="email" value="" name="customer[email]" placeholder="Email Address" id="email" class="input-field" />--%>
-                              <asp:TextBox ID="TxtEmailAddress" runat="server" placeholder="Email Address" class="input-field" ></asp:TextBox>
-						</div>
-                        <div class="clearfix large_form">
-							<label for="email">Address:</label>
-							<%--<input type="email" value="" name="customer[email]" placeholder="Email Address" id="email" class="input-field" />--%>
-                              <asp:TextBox ID="txtAddress" runat="server" placeholder="Address" class="input-field" ></asp:TextBox>
-						</div>
-						<div class="clearfix large_form">
-							<label for="Moibleno">Mobile No.:</label>
-							<%--<input type="password" value="" name="customer[password]" placeholder="Password" id="password" class="input-field" />--%>
-                             <asp:TextBox ID="txtmobileno" runat="server" placeholder="Mobile Number" class="input-field" ></asp:TextBox>
-						</div>
-                        <br/>
-                             <div class="clearfix large_form">
-                             <%--<label for="ProfilePhoto">Profile Photo:</label>--%>
-                              <asp:Label for="ProfilePhoto" ID="FileUpload" runat="server" class="input-field" Text="">Choose Profile Photo</asp:Label>
-                              <br/>
-                                    <asp:FileUpload ID="fuProfilePhoto" runat="server" />
-                                               
-                             <asp:Button ID="btnupload" runat="server" Text="Upload" BackColor="#98C85A" 
-                                     Font-Bold="True" Font-Size="Medium" ForeColor="White" Width="165px" 
-                                     onclick="btnupload_Click" />
-                               
-                                                    
-                                                </div>
-                            <div> 
-                                <asp:Label ID="Label1" runat="server" Text=""></asp:Label>
-                            </div>
-                            <div class="clearfix large_form"> 
-                                <asp:Image ID="Image1" runat="server" />
-                            </div>
-    
-                        
-						 <div class="action_bottom">
-                             <asp:Button ID="btnSubmit" class="button" runat="server" Text="Create Account" 
-                                 onclick="btnSubmit_Click" />
-                                <%--<input class="button" type="submit" value="Create Account" />--%>
-                            </div>
-                        </form>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
+<div class="custom-form-container login-form" style="position: relative;padding: 50px 0px; z-index: 0">
+  <div class="container">
+    <div class="col-md-offset-3 col-md-6 no-pd">
+      <div class="content-form">
+        
+        <div class="background" style="background-image: url('../../cdn.shopify.com/s/files/1/2720/5854/t/3/assets/bg-signin96ab.jpg?v=8627352851137486050')">
+          <div class="overlay-content"></div>
+          <div class="tab-content">
+            <div class="active tab-pane fade in" id="login">
+              <div class="content-form">
+                <h3><span>Sign In</span> <span>Don&#39;t have an account?<a href="register.html">Sign Up</a></span></h3>
+                  <form runat="server"><input type="hidden" name="form_type" value="customer_login" /><input type="hidden" name="utf8" value="✓" />
+                  
+                <div class="clearfix large_form">
+                  <%--<label for="customer_email">Email Address</label>--%>
+                  <%--<input type="text"  class="input-field" name="customer[email]" id="customer_email" placeholder="Email">--%>
+                    <asp:TextBox ID="txtemailadd" runat="server" class="input-field" placeholder="Email Address"></asp:TextBox>
+                </div>
+                <div class="clearfix large_form">
+                  <%--<label for="customer_password">Password</label>--%>
+                  <%--<input type="hidden" name="checkout_url" value="/collections/all" />--%>
+                  <%--<input type="password"  class="input-field" name="customer[password]" id="customer_password" placeholder="Password">--%>
+                    <asp:TextBox ID="txtpassword" runat="server" class="input-field" TextMode="Password" placeholder="Password" ></asp:TextBox>
+                  <%--<div class="forgot_password">
+                    <a href="#recovery" role="tab" data-toggle="tab">Forgot your password?</a>
+                  </div>--%>
+                </div>
+                 <div class="action_bottom">
+                  <%--<input class="button" type="submit" value="Sign In" />--%>
+                     <asp:Button ID="btnsubmit" runat="server" class="button" Text="LOGIN" 
+                         onclick="btnsubmit_Click" />
+                </div>
+           <asp:Panel ID="panelotp" runat="server" BorderColor="Black" 
+                                        Height="312px" Visible="False">
+                                        <div class="form-group row">
+                                        <div class="col-sm-9"> 
+                                         <%--<asp:LinkButton ID="lbClose" runat="server" onclick="lbClose_Click">Close</asp:LinkButton>--%>
+                                        <%--<label class="col-sm-12 text-right control-label col-form-label">:</label>--%>
+                                        </div>
+                                        </div>
+                                        <br/>
+                                        <br/>
+                                         <div class="col-sm-12">
+                   <div class="clearfix large_form">
+                  <%--<label for="customer_email">Email Address</label>--%>
+                  <%--<input type="text"  class="input-field" name="customer[email]" id="customer_email" placeholder="Email">--%>
+                    <asp:TextBox ID="txtotp" runat="server" class="input-field" placeholder="Enter Otp"></asp:TextBox>
+                </div>
+               </div>
+                <div class="action_bottom">
+                  <%--<input class="button" type="submit" value="Sign In" />--%>
+                     <asp:Button ID="btnupdate" runat="server" class="button" Text="Submit" onclick="btnupdate_Click" 
+                        />
+                </div>
+                                          
+                    
+                  </asp:Panel>
+                  </form>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="recovery">
+              <div class="content-form">
+                <div class="header-form">
+                  <h3 class="title">Reset Password</h3>
+                  <p class="note">We will send you an email to reset your password.</p>
+                </div>
+                  <form method="post" action="https://organic-shopy.myshopify.com/account/recover" accept-charset="UTF-8"><input type="hidden" name="form_type" value="recover_customer_password" /><input type="hidden" name="utf8" value="✓" />
+                  
+                <div  class="clearfix large_form">
+                  <label for="recover-email">Email</label>
+                  <input type="email"  name="email" id="recover-email" class="input-field" placeholder="Email">
+                  <div class="forgot_password">
+                    <a href="#login" role="tab" data-toggle="tab">Cancel</a>
+                  </div>
+                </div>
+                <div class="action_bottom">
+                  <input class="button" type="submit" value="Submit" />
+                </div>
+                  </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
     </div>
     <div id="shopify-section-footer" class="shopify-section"><footer>
@@ -646,5 +903,5 @@
   Liquid error: Could not find asset snippets/enzimify.liquid
 </body>
 
-<!-- Mirrored from organic-shopy.myshopify.com/account/register by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 07 Mar 2020 04:02:47 GMT -->
+<!-- Mirrored from organic-shopy.myshopify.com/account/login by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 07 Mar 2020 04:02:44 GMT -->
 </html>

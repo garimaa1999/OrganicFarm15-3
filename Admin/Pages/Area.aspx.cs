@@ -21,6 +21,7 @@ public partial class Admin_Pages_Default : System.Web.UI.Page
         dcdc.AreaMasters.InsertOnSubmit(am);
         dcdc.SubmitChanges();
         gvArea.DataBind();
+        txtAreaName.Text = "";
     }
 
 }

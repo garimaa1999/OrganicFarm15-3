@@ -22,5 +22,6 @@ public partial class Admin_Pages_Default : System.Web.UI.Page
         dcdc.CityMasters.InsertOnSubmit(cm);
         dcdc.SubmitChanges();
         gvCity.DataBind();
+        txtCityName.Text = "";
     }
 }
